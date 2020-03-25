@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">GabrielaMistral</string>
+
+
+    <string name="preguntaInicial">¿Sos el usuario administrador?</string>
+    <string name="btnUserOk">Si</string>
+    <string name="btnUserRamdon">No</string>
+    <string name="splashScreenVersiculo">Rom 14:19</string>
+    <string name="splashScreenTexto">Así que, sigamos lo que contribuye a la paz y a la mutua edificación.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="btnLogin">Ingresar</string>
+    <string name="login_title">Iniciar Sesion</string>
+    <string name="login_username_required">Username es requerido</string>
+    <string name="login_password_required">Password es requerida</string>
+    <string name="volver">Volver</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="evento_autor">Autor</string>
+    <string name="evento_titulo">Titulo del evento</string>
+    <string name="evento_calle">Calle</string>
+    <string name="evento_altura">Altura</string>
+    <string name="evento_localidad_barrio">LocalidadBarrio</string>
+    <string name="evento_seccion">Seccion</string>
+    <string name="evento_fecha_hora">Fecha y Hora</string>
+    <string name="titulo_calendario">Eventos</string>
+    <string name="titulo_devocional">Devocionales</string>
+
+</resources>
