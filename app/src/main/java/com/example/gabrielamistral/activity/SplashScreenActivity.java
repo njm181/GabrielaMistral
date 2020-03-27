@@ -1,4 +1,4 @@
-package com.example.gabrielamistral;
+package com.example.gabrielamistral.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.example.gabrielamistral.R;
+
 public class SplashScreenActivity extends AppCompatActivity {
 
-    private static final Long splashTime = 5000L;
+    private static final Long splashTime = 1000L;
     private Handler myHandler;
 
     @Override

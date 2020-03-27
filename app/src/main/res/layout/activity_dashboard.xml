@@ -1,22 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".DashboardActivity">
+    android:padding="16dp"
+    tools:context=".activity.DashboardActivity">
 
-
-   <fragment
-       android:id="@+id/fragment"
-       android:name="com.example.gabrielamistral.SelectCalendarFragment"
+   <LinearLayout
+       android:id="@+id/linearLayoutEventos"
        android:layout_width="match_parent"
-       android:layout_height="match_parent"
+       android:layout_height="0dp"
+       android:layout_marginBottom="2dp"
        app:layout_constraintBottom_toTopOf="@+id/guideline7"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toTopOf="parent" />
+       app:layout_constraintTop_toTopOf="parent"
+       android:orientation="vertical">
+
+      <com.google.android.material.card.MaterialCardView
+          android:id="@+id/cardviewEvento"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          app:cardCornerRadius="8dp"
+          app:cardBackgroundColor="#102027"
+          app:cardElevation="4dp"
+          app:rippleColor="@color/colorPrimaryDark"
+          android:clickable="true"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvEventos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="8dp"
+                android:textSize="20dp"
+                android:textColor="@color/primaryTextColor"
+                android:text="@string/titulo_calendario" />
+
+            <ImageView
+                android:id="@+id/ivEventos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/calendar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+         </LinearLayout>
+
+      </com.google.android.material.card.MaterialCardView>
+
+   </LinearLayout>
+
 
    <androidx.constraintlayout.widget.Guideline
        android:id="@+id/guideline7"
@@ -25,5 +71,61 @@
        android:orientation="horizontal"
        app:layout_constraintGuide_percent="0.5" />
 
+   <LinearLayout
+       android:id="@+id/linearLayoutDevocionales"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_marginTop="2dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="@+id/guideline7"
+       android:orientation="vertical">
 
-</LinearLayout>
+      <com.google.android.material.card.MaterialCardView
+          android:id="@+id/cardviewDevocionales"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          app:cardCornerRadius="8dp"
+          app:cardBackgroundColor="#102027"
+          app:cardElevation="4dp"
+          app:rippleColor="@color/colorPrimaryDark"
+          android:clickable="true"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvDevocionales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="8dp"
+                android:textSize="20dp"
+                android:textColor="@color/primaryTextColor"
+                android:text="@string/titulo_devocional" />
+
+            <ImageView
+                android:id="@+id/ivDevocional"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/book_one"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+         </LinearLayout>
+
+      </com.google.android.material.card.MaterialCardView>
+
+   </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
