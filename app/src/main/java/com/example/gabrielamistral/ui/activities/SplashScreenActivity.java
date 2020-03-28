@@ -1,4 +1,4 @@
-package com.example.gabrielamistral.activity;
+package com.example.gabrielamistral.ui.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 

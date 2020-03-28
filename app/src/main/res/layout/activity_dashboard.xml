@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".activity.DashboardActivity">
+    tools:context=".ui.activities.DashboardActivity">
 
    <LinearLayout
        android:id="@+id/linearLayoutEventos"
@@ -25,7 +25,7 @@
           app:cardCornerRadius="8dp"
           app:cardBackgroundColor="#102027"
           app:cardElevation="4dp"
-          app:rippleColor="@color/colorPrimaryDark"
+          app:rippleColor="@color/colorSecundary"
           android:clickable="true"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
@@ -89,7 +89,7 @@
           app:cardCornerRadius="8dp"
           app:cardBackgroundColor="#102027"
           app:cardElevation="4dp"
-          app:rippleColor="@color/colorPrimaryDark"
+          app:rippleColor="@color/colorSecundary"
           android:clickable="true"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"

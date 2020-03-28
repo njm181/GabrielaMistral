@@ -1,0 +1,128 @@
+package com.example.gabrielamistral.ui.fragments;
+
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.app.Application;
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.gabrielamistral.R;
+import com.example.gabrielamistral.ui.fragments.EventoFragment.OnListFragmentInteractionListener;
+import com.example.gabrielamistral.ui.fragments.DummyContent.DummyItem;
+import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.textview.MaterialTextView;
+
+import java.util.List;
+
+/**
+ * {@link RecyclerView.Adapter} that can display a {@link DummyItem} and makes a call to the
+ * specified {@link OnListFragmentInteractionListener}.
+ * TODO: Replace the implementation with code for your data type.
+ */
+public class EventoRecyclerViewAdapter extends RecyclerView.Adapter<EventoRecyclerViewAdapter.ViewHolder> {
+
+    private final List<DummyItem> mValues;
+    private final OnListFragmentInteractionListener mListener;
+    //private Context ctx;
+
+    public EventoRecyclerViewAdapter(List<DummyItem> items, OnListFragmentInteractionListener listener) {
+        mValues = items;
+        mListener = listener;
+    }
+
+    @Override
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.fragment_evento, parent, false);
+
+        ViewHolder viewHolder = new ViewHolder(view);
+
+        viewHolder.mView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(ctx, "CLICK SOBRE EL EVENTO", Toast.LENGTH_SHORT).show();
+                System.out.println("CLICKKKKK SOBRE EVENTO");
+            }
+        });
+
+        return viewHolder;
+    }
+
+    @Override
+    public void onBindViewHolder(final ViewHolder holder, int position) {
+        holder.mItem = mValues.get(position);
+
+
+        /*holder.materialCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("CLICK SOBRE EL EVENTOOOOOO");
+            }
+        });*/
+
+
+        /*holder.mIdView.setText(mValues.get(position).id);
+        holder.mContentView.setText(mValues.get(position).content);*/
+
+
+        holder.mView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (null != mListener) {
+                    // Notify the active callbacks interface (the activity, if the
+                    // fragment is attached to one) that an item has been selected.
+                    //mListener.onListFragmentInteraction(holder.mItem);
+                    System.out.println("CLICK SOBRE EVENTOOOOOOO");
+                }
+            }
+        });
+    }
+
+
+
+
+    @Override
+    public int getItemCount() {
+        return mValues.size();
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        public final View mView;
+        public MaterialCardView materialCardView;
+        public MaterialTextView autor;
+        public MaterialTextView titulo;
+        public MaterialTextView fechaHora;
+        public MaterialTextView detalle;
+        public MaterialTextView calle;
+        public MaterialTextView localidadBarrio;
+        public MaterialTextView seccion;
+        public MaterialTextView altura;
+
+
+        //Evento
+        public DummyItem mItem;
+
+        public ViewHolder(View view) {
+            super(view);
+            mView = view;
+            autor = view.findViewById(R.id.tvEventoAutor);
+            titulo = view.findViewById(R.id.tvEventoTitulo);
+            fechaHora = view.findViewById(R.id.tvEventoFechaHora);
+            detalle = view.findViewById(R.id.tvEventoDetalle);
+            calle = view.findViewById(R.id.tvEventoCalle);
+            localidadBarrio = view.findViewById(R.id.tvEventoLocalidadBarrio);
+            seccion = view.findViewById(R.id.tvEventoSeccion);
+            altura = view.findViewById(R.id.tvEventoAltura);
+            materialCardView = view.findViewById(R.id.cardviewEvento);
+        }
+
+        @Override
+        public String toString() {
+            return super.toString() + " '" + titulo.getText() + "'";
+        }
+    }
+}

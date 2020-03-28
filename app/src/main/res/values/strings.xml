@@ -27,5 +27,6 @@
     <string name="evento_fecha_hora">Fecha y Hora</string>
     <string name="titulo_calendario">Eventos</string>
     <string name="titulo_devocional">Devocionales</string>
+    <string name="evento_detalle">Detalle del evento</string>
 
 </resources>
