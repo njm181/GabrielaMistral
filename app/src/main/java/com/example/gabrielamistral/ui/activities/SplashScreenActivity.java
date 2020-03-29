@@ -10,7 +10,7 @@ import com.example.gabrielamistral.R;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
-    private static final Long splashTime = 1000L;
+    private static final Long splashTime = 3000L;
     private Handler myHandler;
 
     @Override

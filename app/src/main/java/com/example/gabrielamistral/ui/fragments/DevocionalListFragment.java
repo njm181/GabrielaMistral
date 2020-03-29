@@ -50,7 +50,6 @@ public class DevocionalListFragment extends Fragment {
         devocionalRecyclerViewAdapter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "CLIIIICKKKK", Toast.LENGTH_SHORT).show();
                 detalleDevocionalFragment = new DetalleDevocionalFragment();
                 //Bundle para enviar la data
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();

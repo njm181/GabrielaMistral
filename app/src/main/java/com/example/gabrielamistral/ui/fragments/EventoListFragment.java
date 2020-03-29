@@ -58,7 +58,6 @@ public class EventoListFragment extends Fragment{
         eventoRecyclerViewAdapter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "CLIIIICKKKK", Toast.LENGTH_SHORT).show();
                 detalleEventoFragment = new DetalleEventoFragment();
                 //Bundle para enviar la data
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
