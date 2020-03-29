@@ -18,6 +18,7 @@
     <string name="login_password_required">Password es requerida</string>
     <string name="volver">Volver</string>
     <string name="iniciar_sesion">Iniciar Sesión</string>
+
     <string name="evento_autor">Autor</string>
     <string name="evento_titulo">Titulo del evento</string>
     <string name="evento_calle">Calle</string>
@@ -28,5 +29,12 @@
     <string name="titulo_calendario">Eventos</string>
     <string name="titulo_devocional">Devocionales</string>
     <string name="evento_detalle">Detalle del evento</string>
+
+    <string name="devocinal_autor">Autor</string>
+    <string name="devocinal_titulo">Titulo Devocional</string>
+    <string name="devocinal_subtitulo">Subtitulo devocional</string>
+    <string name="devocinal_descripcion">Descripción</string>
+    <string name="devocinal_links">Links</string>
+
 
 </resources>

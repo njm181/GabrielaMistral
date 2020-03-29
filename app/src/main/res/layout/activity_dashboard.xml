@@ -86,30 +86,31 @@
           android:id="@+id/cardviewDevocionales"
           android:layout_width="match_parent"
           android:layout_height="match_parent"
-          app:cardCornerRadius="8dp"
-          app:cardBackgroundColor="#102027"
-          app:cardElevation="4dp"
-          app:rippleColor="@color/colorSecundary"
           android:clickable="true"
+          app:cardBackgroundColor="#102027"
+          app:cardCornerRadius="8dp"
+          app:cardElevation="4dp"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent">
+          app:layout_constraintTop_toTopOf="parent"
+          app:rippleColor="@color/colorSecundary">
 
          <LinearLayout
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_gravity="center"
              android:orientation="vertical">
+
             <TextView
                 android:id="@+id/tvDevocionales"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:paddingBottom="8dp"
-                android:textSize="20dp"
+                android:text="@string/titulo_devocional"
                 android:textColor="@color/primaryTextColor"
-                android:text="@string/titulo_devocional" />
+                android:textSize="20dp" />
 
             <ImageView
                 android:id="@+id/ivDevocional"
