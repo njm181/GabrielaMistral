@@ -18,7 +18,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -26,13 +27,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:orientation="horizontal">
-                <MultiAutoCompleteTextView
+                <com.google.android.material.textview.MaterialTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/crear_evento"
                     android:gravity="center"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="20dp"/>
+
+                <View android:id="@+id/line"
+                    android:background="#ffffff"
+                    android:layout_width = "fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_centerVertical ="true"
+                    android:layout_alignParentTop="true"/>
             </LinearLayout>
 
             <LinearLayout
@@ -49,6 +57,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/evento_autor"
                     app:helperText="@string/campo_requerido"
+                    android:textColorHint="@color/primaryTextColor"
                     app:errorEnabled="true"
                     app:errorContentDescription="@string/campo_vacio"
                     app:endIconMode="clear_text"
@@ -83,6 +92,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/evento_titulo"
+                android:textColorHint="@color/primaryTextColor"
                 app:helperText="@string/campo_requerido"
                 app:errorEnabled="true"
                 app:errorContentDescription="@string/campo_vacio"
@@ -113,12 +123,25 @@
                 android:layout_marginBottom="4dp"
                 android:orientation="horizontal">
 
+                <Spinner
+                    android:id="@+id/planets_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
+
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/outlinedSeccionEventoTextField"
+                    android:id="@+id/outlinedDetalleEventoTextField"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/evento_seccion"
+                    android:hint="@string/evento_detalle"
+                    android:textColorHint="@color/primaryTextColor"
                     app:helperText="@string/campo_requerido"
                     app:errorEnabled="true"
                     app:errorContentDescription="@string/campo_vacio"
@@ -127,26 +150,191 @@
                     app:boxCornerRadiusBottomStart="18dp"
                     app:boxCornerRadiusTopEnd="18dp"
                     app:boxCornerRadiusTopStart="18dp"
-                    app:startIconDrawable="@drawable/ic_group_white">
+                    app:startIconDrawable="@drawable/ic_text_fields_white">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/tvInputSeccionEvento"
+                        android:id="@+id/tvInputDetalleEvento"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textPersonName|textCapWords"
-                        android:maxLength="15"
+                        android:inputType="textMultiLine|textCapWords"
+                        android:maxLength="150"
                         android:textColor="@color/primaryTextColor" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
 
-            </LinearLayout>mn,b
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/outlinedFechaHoraEventoTextField"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/evento_fecha_hora"
+                    android:textColorHint="@color/primaryTextColor"
+                    app:helperText="@string/campo_requerido"
+                    app:errorEnabled="true"
+                    app:errorContentDescription="@string/campo_vacio"
+                    app:endIconMode="clear_text"
+                    app:boxCornerRadiusBottomEnd="18dp"
+                    app:boxCornerRadiusBottomStart="18dp"
+                    app:boxCornerRadiusTopEnd="18dp"
+                    app:boxCornerRadiusTopStart="18dp"
+                    app:startIconDrawable="@drawable/ic_date_range_white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tvInputFechaHoraEvento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="datetime|date"
+                        android:maxLength="150"
+                        android:textColor="@color/primaryTextColor" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/outlinedLocalidadBarrioEventoTextField"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/evento_localidad_barrio"
+                    android:textColorHint="@color/primaryTextColor"
+                    app:helperText="@string/campo_requerido"
+                    app:errorEnabled="true"
+                    app:errorContentDescription="@string/campo_vacio"
+                    app:endIconMode="clear_text"
+                    app:boxCornerRadiusBottomEnd="18dp"
+                    app:boxCornerRadiusBottomStart="18dp"
+                    app:boxCornerRadiusTopEnd="18dp"
+                    app:boxCornerRadiusTopStart="18dp"
+                    app:startIconDrawable="@drawable/ic_place_white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tvInputLocalidadBarrioEvento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="datetime|date"
+                        android:maxLength="150"
+                        android:textColor="@color/primaryTextColor" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
 
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="0.33"
+                    android:layout_marginRight="2dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/outlinedCalleEventoTextField"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/evento_calle"
+                        android:textColorHint="@color/primaryTextColor"
+                        app:helperText="@string/campo_requerido"
+                        app:errorEnabled="true"
+                        app:errorContentDescription="@string/campo_vacio"
+                        app:endIconMode="clear_text"
+                        app:boxCornerRadiusBottomEnd="18dp"
+                        app:boxCornerRadiusBottomStart="18dp"
+                        app:boxCornerRadiusTopEnd="18dp"
+                        app:boxCornerRadiusTopStart="18dp"
+                        app:startIconDrawable="@drawable/ic_my_location_white">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tvInputCalleEvento"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text|textCapWords"
+                            android:maxLength="15"
+                            android:textColor="@color/primaryTextColor" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="0.33"
+                    android:layout_marginLeft="2dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/outlinedAlturaEventoTextField"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/evento_altura"
+                        android:textColorHint="@color/primaryTextColor"
+                        app:helperText="@string/campo_requerido"
+                        app:errorEnabled="true"
+                        app:errorContentDescription="@string/campo_vacio"
+                        app:endIconMode="clear_text"
+                        app:boxCornerRadiusBottomEnd="18dp"
+                        app:boxCornerRadiusBottomStart="18dp"
+                        app:boxCornerRadiusTopEnd="18dp"
+                        app:boxCornerRadiusTopStart="18dp"
+                        app:startIconDrawable="@drawable/ic_my_location_white">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tvInputAlturaEvento"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            android:textColor="@color/primaryTextColor" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crear_evento"
+                        app:cornerRadius="4dp"
+                        android:elevation="4dp"
+                        app:rippleColor="@color/colorSecundary"/>
+
+                </LinearLayout>
 
 
         </LinearLayout>
+
+
 
 
 

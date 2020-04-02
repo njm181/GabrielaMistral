@@ -38,6 +38,15 @@
     <string name="crear_evento">Crear Evento</string>
     <string name="campo_requerido">Requerido</string>
     <string name="campo_vacio">El campo es obligatorio</string>
+    <string name="crear_devocional">Crear Devocional</string>
 
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <string-array name="seccio_array">
+            <item>Nuevo Joven</item>
+            <item>Enap</item>
+        </string-array>
+    </resources>
 
 </resources>
