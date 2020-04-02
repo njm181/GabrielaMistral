@@ -1,4 +1,4 @@
-package com.example.gabrielamistral.ui.fragments;
+package com.example.gabrielamistral.ui.fragments.devocional;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.gabrielamistral.R;
-import com.example.gabrielamistral.ui.fragments.DevocionalListFragment.OnListFragmentInteractionListener;
+import com.example.gabrielamistral.ui.fragments.devocional.DevocionalListFragment.OnListFragmentInteractionListener;
 import com.example.gabrielamistral.ui.fragments.dummy.DummyContent.DummyItem;
 
 import java.util.List;

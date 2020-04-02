@@ -1,4 +1,4 @@
-package com.example.gabrielamistral.ui.fragments;
+package com.example.gabrielamistral.ui.fragments.evento;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -6,28 +6,30 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.example.gabrielamistral.R;
-import com.example.gabrielamistral.ui.fragments.dummy.DummyContent;
-import com.example.gabrielamistral.ui.fragments.dummy.DummyContent.DummyItem;
+import com.example.gabrielamistral.ui.fragments.DummyContent;
+import com.example.gabrielamistral.ui.fragments.DummyContent.DummyItem;
 
-public class DevocionalListFragment extends Fragment {
+public class EventoListFragment extends Fragment{
+
+
+    private EventoRecyclerViewAdapter eventoRecyclerViewAdapter;
+    private RecyclerView recyclerView;
+
+    private OnListFragmentInteractionListener mListener;
 
     private Context context;
-    private OnListFragmentInteractionListener mListener;
-    private RecyclerView recyclerView;
-    private DevocionalRecyclerViewAdapter devocionalRecyclerViewAdapter;
-    private DetalleDevocionalFragment detalleDevocionalFragment;
 
-    public DevocionalListFragment() {
+    private DetalleEventoFragment detalleEventoFragment;
+
+    public EventoListFragment() {
     }
 
     @Override
@@ -39,34 +41,34 @@ public class DevocionalListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_devocional_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_evento_list, container, false);
 
-        Context context = view.getContext();
         recyclerView = (RecyclerView) view;
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
-        devocionalRecyclerViewAdapter = new DevocionalRecyclerViewAdapter(DummyContent.ITEMS, mListener);
-        recyclerView.setAdapter(devocionalRecyclerViewAdapter);
 
-        devocionalRecyclerViewAdapter.setOnClickListener(new View.OnClickListener() {
+        eventoRecyclerViewAdapter = new EventoRecyclerViewAdapter(getContext(), DummyContent.ITEMS);
+
+        recyclerView.setAdapter(eventoRecyclerViewAdapter);
+
+        eventoRecyclerViewAdapter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                detalleDevocionalFragment = new DetalleDevocionalFragment();
+                detalleEventoFragment = new DetalleEventoFragment();
                 //Bundle para enviar la data
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
-                fragmentTransaction.replace(R.id.fragment_container, detalleDevocionalFragment).addToBackStack(null).commit();
+                fragmentTransaction.replace(R.id.fragment_container, detalleEventoFragment).addToBackStack(null).commit();
             }
         });
 
         return view;
     }
 
-
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-
+        //obteniendo el contexto, para hacer la comunicacion entre la vista y el Detalle
         if(context != null){
             this.context = context;
         }
@@ -84,6 +86,7 @@ public class DevocionalListFragment extends Fragment {
         super.onDetach();
         mListener = null;
     }
+
 
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name

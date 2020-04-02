@@ -1,10 +1,11 @@
-package com.example.gabrielamistral.ui.fragments;
+package com.example.gabrielamistral.ui.fragments.evento;
 
 import android.view.View;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.gabrielamistral.R;
+import com.example.gabrielamistral.ui.fragments.DummyContent;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.textview.MaterialTextView;
 

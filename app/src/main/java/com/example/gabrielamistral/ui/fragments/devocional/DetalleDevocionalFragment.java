@@ -1,4 +1,4 @@
-package com.example.gabrielamistral.ui.fragments;
+package com.example.gabrielamistral.ui.fragments.devocional;
 
 import android.os.Bundle;
 

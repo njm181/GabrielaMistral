@@ -4,15 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.gabrielamistral.R;
-import com.example.gabrielamistral.ui.fragments.DetalleDevocionalFragment;
-import com.example.gabrielamistral.ui.fragments.DetalleEventoFragment;
-import com.example.gabrielamistral.ui.fragments.DevocionalListFragment;
+import com.example.gabrielamistral.ui.fragments.devocional.DevocionalListFragment;
 import com.example.gabrielamistral.ui.fragments.DummyContent;
-import com.example.gabrielamistral.ui.fragments.EventoListFragment;
+import com.example.gabrielamistral.ui.fragments.evento.EventoListFragment;
 
 public class EventosActivity extends AppCompatActivity implements EventoListFragment.OnListFragmentInteractionListener, DevocionalListFragment.OnListFragmentInteractionListener {
 

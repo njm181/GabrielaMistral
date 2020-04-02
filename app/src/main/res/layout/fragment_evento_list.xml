@@ -10,7 +10,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
         app:layoutManager="LinearLayoutManager"
-        tools:context=".ui.fragments.EventoListFragment"
+        tools:context=".ui.fragments.evento.EventoListFragment"
         tools:listitem="@layout/fragment_evento" />
 
 

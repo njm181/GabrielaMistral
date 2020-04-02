@@ -1,4 +1,4 @@
-package com.example.gabrielamistral.ui.fragments;
+package com.example.gabrielamistral.ui.fragments.devocional;
 
 import android.view.View;
 import android.widget.TextView;

@@ -24,7 +24,7 @@
     <string name="evento_calle">Calle</string>
     <string name="evento_altura">Altura</string>
     <string name="evento_localidad_barrio">LocalidadBarrio</string>
-    <string name="evento_seccion">Seccion</string>
+    <string name="evento_seccion">Sección</string>
     <string name="evento_fecha_hora">Fecha y Hora</string>
     <string name="titulo_calendario">Eventos</string>
     <string name="titulo_devocional">Devocionales</string>
@@ -35,6 +35,9 @@
     <string name="devocinal_subtitulo">Subtitulo devocional</string>
     <string name="devocinal_descripcion">Descripción</string>
     <string name="devocinal_links">Links</string>
+    <string name="crear_evento">Crear Evento</string>
+    <string name="campo_requerido">Requerido</string>
+    <string name="campo_vacio">El campo es obligatorio</string>
 
 
 </resources>
