@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 
 import com.example.gabrielamistral.R;
+import com.example.gabrielamistral.ui.fragments.devocional.CrearDevocionalFragment;
 import com.example.gabrielamistral.ui.fragments.evento.CrearEventoFragment;
 
 public class CrearEventoDevocionalActivity extends AppCompatActivity {
@@ -14,6 +15,7 @@ public class CrearEventoDevocionalActivity extends AppCompatActivity {
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
     private CrearEventoFragment crearEventoFragment;
+    private CrearDevocionalFragment crearDevocionalFragment;
     String tipo;
 
     @Override
@@ -36,14 +38,14 @@ public class CrearEventoDevocionalActivity extends AppCompatActivity {
                 fragmentTransaction.add(R.id.crear_evento_devocional_container, crearEventoFragment);
                 fragmentTransaction.commit();
                 break;
-            /*case "devocional":
+            case "crearDevocional":
                 fragmentManager = getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
 
-                devocionalListFragment = new DevocionalListFragment();
-                fragmentTransaction.add(R.id.crear_evento_devocional_container, devocionalListFragment);
+                crearDevocionalFragment = new CrearDevocionalFragment();
+                fragmentTransaction.add(R.id.crear_evento_devocional_container, crearDevocionalFragment);
                 fragmentTransaction.commit();
-                break;*/
+                break;
         }
     }
 }

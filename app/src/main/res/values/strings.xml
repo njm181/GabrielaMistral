@@ -43,8 +43,8 @@
 
 
     <string-array name="seccio_array">
-            <item>Nuevo Joven</item>
-            <item>Enap</item>
-        </string-array>
+        <item>Nuevo Joven</item>
+        <item>Enap</item>
+    </string-array>
 
 </resources>
