@@ -20,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
+            android:padding="8dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -34,13 +35,6 @@
                     android:gravity="center"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="20dp"/>
-
-                <View android:id="@+id/line"
-                    android:background="#ffffff"
-                    android:layout_width = "fill_parent"
-                    android:layout_height="1dip"
-                    android:layout_centerVertical ="true"
-                    android:layout_alignParentTop="true"/>
             </LinearLayout>
 
             <LinearLayout
@@ -119,7 +113,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginBottom="4dp"
                 android:orientation="horizontal">
 
@@ -192,8 +186,7 @@
                         android:id="@+id/tvInputFechaHoraEvento"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="datetime|date"
-                        android:maxLength="150"
+                        android:inputType="time"
                         android:textColor="@color/primaryTextColor" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -239,6 +232,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -324,7 +318,7 @@
                     <com.google.android.material.button.MaterialButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/crear_evento"
+                        android:text="@string/crear"
                         app:cornerRadius="4dp"
                         android:elevation="4dp"
                         app:rippleColor="@color/colorSecundary"/>

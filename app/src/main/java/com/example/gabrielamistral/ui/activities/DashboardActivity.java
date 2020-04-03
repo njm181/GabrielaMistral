@@ -7,12 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.gabrielamistral.R;
+import com.example.gabrielamistral.utils.Utils;
 import com.google.android.material.card.MaterialCardView;
 
 public class DashboardActivity extends AppCompatActivity implements View.OnClickListener {
 
     private MaterialCardView cardviewEvento;
     private MaterialCardView cardviewDevocional;
+    private Utils utils;
 
 
     @Override
@@ -36,24 +38,20 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onClick(View v) {
+        utils = new Utils();
         String tipo;
         switch (v.getId()){
             case R.id.cardviewEvento:
                 tipo = "evento";
                 System.out.println("Click");
-                changeActivity(EventosActivity.class, tipo);
+                utils.changeActivity(EventosActivity.class, tipo, this);
                 break;
             case R.id.cardviewDevocionales:
                 tipo = "devocional";
                 System.out.println("Click");
-                changeActivity(EventosActivity.class, tipo);
+                utils.changeActivity(EventosActivity.class, tipo, this);
                 break;
         }
     }
 
-    private void changeActivity(Class clase, String tipo){
-        Intent intent = new Intent(this, clase);
-        intent.putExtra("TIPO", tipo);
-        startActivity(intent);
-    }
 }
