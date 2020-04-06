@@ -10,6 +10,6 @@ import retrofit2.http.POST;
 
 public interface WebService {
 
-    @POST("webServicesGM/select_logueo_user.php")
+    @POST("select_logueo_user.php")
     Call<ResponseLogin> login(@Body RequestLogin requestLogin);
 }
