@@ -6,10 +6,13 @@ import com.example.gabrielamistral.model.response.ResponseLogin;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface WebService {
 
     @POST("select_logueo_user.php")
     Call<ResponseLogin> login(@Body RequestLogin requestLogin);
+
+    //crear pojo de respuestas para los inserts y para los selects
 }

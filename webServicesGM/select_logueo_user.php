@@ -3,7 +3,7 @@
 $hostname_localhost = 'localhost';
 $database_localhost = 'gabriela_mistral';
 $username_localhost = 'root';
-$password_localhost = '';
+$password_localhost = 'root';
 
 
 $json=array();
