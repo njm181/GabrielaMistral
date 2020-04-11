@@ -2,8 +2,8 @@
 
 $hostname_localhost = 'localhost';
 $database_localhost = 'gabriela_mistral';
-$username_localhost = 'root';
-$password_localhost = 'root';
+$username_localhost = '';
+$password_localhost = '';
 
 
 $json=array();
