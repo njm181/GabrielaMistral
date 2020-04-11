@@ -26,12 +26,12 @@ if(isset($_GET["autor"])&&isset($_GET["titulo"])&&isset($_GET["seccion"])&&isset
 		$resultado_insert=mysqli_query($conexion,$insert);
 		
 		if($resultado_insert){
-            $resul = "Se hizo el insert!!";
+            $resul = true;
             mysqli_close($conexion);
 			echo $resul;
 		}
 		else{
-            echo "No se hizo el insert";
+            echo false;
             mysqli_close($conexion);
 
 		}

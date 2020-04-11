@@ -15,7 +15,6 @@
         <activity android:name=".ui.activities.CrearEventoDevocionalActivity"></activity>
         <activity android:name=".ui.activities.DashboardAdminActivity" />
         <activity android:name=".ui.activities.EventosActivity" />
-        <activity android:name=".Activity" />
         <activity android:name=".ui.activities.DashboardActivity" />
         <activity
             android:name=".ui.activities.LoginActivity"
