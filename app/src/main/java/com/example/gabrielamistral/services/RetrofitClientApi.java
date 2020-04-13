@@ -1,3 +1,4 @@
+/*
 package com.example.gabrielamistral.services;
 
 import com.example.gabrielamistral.utils.Constantes;
@@ -18,15 +19,20 @@ public class RetrofitClientApi {
 
     public RetrofitClientApi() {
 
-        loggingInterceptor = new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);
-        httpClientBuilder = new OkHttpClient.Builder().addInterceptor(loggingInterceptor);
+        retrofitInit();
+    }
+
+
+    private void retrofitInit(){
+        loggingInterceptor = new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);//para ver los datos enviados y recibidos en consola
+        httpClientBuilder = new OkHttpClient.Builder().addInterceptor(loggingInterceptor);//httpclient aplica el interceptor para que se pueda usar
         retrofit = new Retrofit.Builder()
                 .baseUrl(Constantes.BASE_URL)//constante
-                .addConverterFactory(GsonConverterFactory.create())
-                .client(httpClientBuilder.build())
+                .addConverterFactory(GsonConverterFactory.create()) //parsear de java a json y viceversa
+                .client(httpClientBuilder.build()) //el cliente que vamos a usar, para que aplique la funcionalidad del interceptor
                 .build();
 
-        webService = retrofit.create(WebService.class);
+        webService = retrofit.create(WebService.class); //instancio el servicio para poder usar las peticiones
     }
 
     //singleton luego migrar a dagger2
@@ -41,3 +47,4 @@ public class RetrofitClientApi {
         return webService;
     }
 }
+*/

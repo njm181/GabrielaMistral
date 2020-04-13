@@ -8,19 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import com.example.gabrielamistral.R;
-import com.example.gabrielamistral.services.RetrofitClientApi;
+//import com.example.gabrielamistral.services.RetrofitClientApi;
 import com.example.gabrielamistral.services.WebService;
-import com.example.gabrielamistral.utils.MyApp;
 import com.example.gabrielamistral.utils.Utils;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class CrearEventoFragment extends Fragment implements View.OnClickListener {
     private TextInputEditText tilAutor, tilTitulo, tilDetalle, tilFechaHora,tilLocalidadBarrio, tilCalle, tillAltura;
@@ -29,7 +23,7 @@ public class CrearEventoFragment extends Fragment implements View.OnClickListene
     private View view;
     private WebService webService;
     private Utils utils;
-    private RetrofitClientApi retrofitClientApi;
+    //private RetrofitClientApi retrofitClientApi;
 
 
     public CrearEventoFragment() {
@@ -44,7 +38,7 @@ public class CrearEventoFragment extends Fragment implements View.OnClickListene
         view = inflater.inflate(R.layout.fragment_crear_evento, container, false);
 
         setElementsResources(view);
-        retrofitInit();
+        //retrofitInit();
         btnCrearEvento.setOnClickListener(this);
 
         return view;
@@ -62,10 +56,10 @@ public class CrearEventoFragment extends Fragment implements View.OnClickListene
         btnCrearEvento = view.findViewById(R.id.btnCrearEvento);
     }
 
-    private void retrofitInit() {
+    /*private void retrofitInit() {
         retrofitClientApi = RetrofitClientApi.getInstance();
         webService = retrofitClientApi.getWebService();
-    }
+    }*/
 
 
     @Override
